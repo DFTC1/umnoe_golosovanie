@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Кому отдать голос?</title>
+<style>
+:root{--bg:#f5f5f2;--card:#fff;--text:#171717;--muted:#737373;--line:#e7e7e3;--accent:#111}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif}
+.wrap{max-width:980px;margin:auto;padding:28px 20px 70px}.top{display:flex;justify-content:space-between;align-items:center;margin-bottom:55px}
+.logo{font-weight:800;font-size:18px}.badge{font-size:13px;color:var(--muted)}
+.hero{max-width:760px;margin-bottom:42px}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px}
+h1{font-size:clamp(42px,7vw,76px);line-height:.98;letter-spacing:-.055em;margin:0 0 22px}h2{font-size:30px;letter-spacing:-.03em;margin:0 0 8px}
+.lead{font-size:18px;line-height:1.55;color:#555;max-width:650px}.section{margin-top:48px}.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:23px;cursor:pointer;transition:.15s}.card:hover{transform:translateY(-2px);box-shadow:0 8px 25px #0000000c}
+.card .num{color:var(--muted);font-size:13px}.card h3{font-size:22px;margin:28px 0 8px}.card p{margin:0;color:var(--muted);line-height:1.45}
+.list{display:flex;flex-direction:column;gap:10px}.person{background:#fff;border:1px solid var(--line);border-radius:15px;padding:17px 18px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.person strong{font-size:17px}.person small{display:block;color:var(--muted);margin-top:5px}.person a{color:inherit;text-decoration:none;font-size:13px;border:1px solid var(--line);padding:8px 11px;border-radius:10px;white-space:nowrap}
+.profile{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;margin-bottom:12px}
+.profile h3{margin:0 0 7px;font-size:20px}.profile .meta{color:var(--muted);font-size:13px;margin-bottom:12px}
+.profile p{margin:0;color:#555;line-height:1.55}.recommend{margin-top:28px;background:#171717;color:#fff;border-radius:18px;padding:24px}
+.recommend h3{margin:0 0 10px;font-size:21px}.recommend p{margin:0;color:#ddd;line-height:1.55}
+.candidate{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:14px}
+.candidate-head{background:#202020;color:#fff;padding:22px 22px 20px;display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+.candidate-head h3{margin:0;font-size:clamp(25px,4vw,38px);line-height:1.05;letter-spacing:-.035em}
+.candidate-kicker{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#bdbdbd;margin-bottom:10px}
+.coalition{display:inline-block;margin-top:12px;padding:7px 10px;border-radius:8px;background:#3a3a3a;color:#fff;font-size:12px}
+.candidate-body{padding:20px 22px 22px}.candidate-body p{margin:0;color:#555;line-height:1.6}
+.candidate-link{display:inline-block;margin-top:15px;color:#111;text-decoration:none;border-bottom:1px solid #111;font-size:13px}
+.recommend{margin-top:0;margin-bottom:22px;background:#171717;color:#fff;border-radius:18px;padding:25px 26px}
+.recommend .rec-label{font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:#aaa;margin-bottom:10px}
+.recommend h3{margin:0 0 10px;font-size:24px}
+.recommend p{margin:0;color:#ddd;line-height:1.6}
+
+.back{display:inline-block;margin-bottom:28px;color:var(--muted);cursor:pointer}.note{background:#eee;border-radius:15px;padding:17px 18px;color:#555;line-height:1.5;margin-top:18px}
+.hidden{display:none}.tag{display:inline-block;border-radius:999px;background:#f0f0ed;padding:5px 9px;font-size:12px;color:#555;margin-left:7px}
+.footer{margin-top:55px;color:#8a8a86;font-size:12px;line-height:1.5}
+@media(max-width:650px){.grid{grid-template-columns:1fr}.top{margin-bottom:35px}.person{align-items:flex-start;flex-direction:column}.person a{display:inline-block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><div class="logo">Кому отдать голос? · Проект «СМИ»</div><div class="badge"></div></header>
+
+<main id="home">
+<section class="hero">
+<div class="eyebrow"></div>
+<h1>Разберитесь в кандидатах.</h1>
+<p> ㅤ</p>
+<p class="lead">Не агитируем, просто знаем о кандидатах чуть больше, чем они хотели бы. Здесь собраны зарегистрированные кандидаты, их фракции и коалиции, а также независимое мнение нашей редакции, касательно каждого. Транспортиром измерили уровень лояльности действующим ''представителям администрации''.</p>
+</section>
+
+<section class="section">
+<h2>Фракционные списки</h2>
+<p class="lead">Зарегистрированные списки и их составы.</p>
+<section class="section" style="margin-top:0">
+<div class="recommend">
+<h3>За кого я рекомендую голосовать:</h3>
+<p>По спискам я буду голосовать за "Блок Вещего" ( Проект Х ). Единственная реальная и конструктивная оппозиция действующей бездействующей администрации.</p>
+</div>
+<p></p>
+<p></p>
+<div class="grid" id="lists"></div>
+</section>
+
+<section class="section">
+<h2>Округа</h2>
+<p class="lead">Пять одномандатных округов.</p>
+<div class="grid" id="districts"></div>
+</section>
+</main>
+
+<main id="detail" class="hidden">
+<div class="back" onclick="goHome()">← Назад</div>
+<div class="eyebrow" id="detailEyebrow"></div>
+<h1 id="detailTitle"></h1>
+<p class="lead" id="detailLead"></p>
+<div class="section"><div class="list" id="people"></div></div>
+<div class="note">Информация на этой странице отражает предоставленные данные о регистрации кандидатов. Наличие фракции или коалиции указано как организационная принадлежность и само по себе не является оценкой кандидата.</div>
+</main>
+
+<footer class="footer">Демонстрационная информационная версия. Перед публикацией проверьте написание фамилий, статусы регистрации и актуальность данных.</footer>
+</div>
+
+<script>
+const districts = [
+ {id:"media",name:"Медиа",desc:"4 зарегистрированных кандидата",people:[
+  ["Николаев Владимир","Север · Блок Вещего","https://t.me/iamnklv"],
+  ["Дзукаева Адриана","Проект Х · Блок Вещего","https://t.me/i_Audrey_7"],
+  ["Чернышов Артемий","Федералисты","https://t.me/catmenmilota"],
+  ["Котлярова Татьяна","Восток · коалиция Федералистов","https://t.me/bitterrsaltsugg"]
+ ]},
+ {id:"relations",name:"Связей",desc:"2 зарегистрированных кандидата",people:[
+  ["Зиганшин Иван","Проект Х · Блок Вещего","https://t.me/Zigaivan"],
+  ["Ермаков Влад","Восток · коалиция Федералистов","https://t.me/WhatIsLove5273"]
+ ]},
+ {id:"creative",name:"Креативный",desc:"2 зарегистрированных кандидата",people:[
+  ["Кокорев Андрей","Рассвет · Блок Вещего","https://t.me/azzillukki"],
+  ["Асалханов Александр","Федералисты","https://t.me/AlexandrAsalkhanov"]
+ ]},
+ {id:"recruiting",name:"Рекрутинговый",desc:"3 зарегистрированных кандидата",people:[
+  ["Милюхина Александра","Единица · Блок Вещего","https://t.me/sashamilyukhina"],
+  ["Швабский Егор","Федералисты","https://t.me/Awkwardner"],
+  ["Кадин Давид","Молодежка","https://t.me/zhan_klod_van_dan"]
+ ]},
+ {id:"method",name:"Методический",desc:"2 зарегистрированных кандидата",people:[
+  ["Арутюнян Самвел","Орион · Блок Вещего","https://t.me/samvelochka"],
+  ["Морозов Владимир","Восток · коалиция Федералистов","https://t.me/Barsovsky"]
+ ]}
+];
+
+const lists = [
+ {id:"project",name:"Блок Вещего ( Проект Х )",desc:"Блок Вещего, он же Штаб Х включает: Проект Х, Север, Единица, Орион, Рассвет. Самый невероятный союз на данных выборах. Основателем и руководителем является Николай Вещий, примечательно что сам на выборы он не выдвинулся.",people:[
+  ["Чувилев Матфей","Проект Х · Блок Вещего","http://t.me/Matfey_88"],["Дугин Антон","Проект Х · Блок Вещего","http://t.me/iamiat"],
+  ["Гайворонский Николай","Север · Блок Вещего","http://t.me/cactus_boris"],["Головня Александр","Рассвет · Блок Вещего","http://t.me/SMUT_33"],
+  ["Кочкин Илья","Единица · Блок Вещего","http://t.me/Every_Flight"],["Жилин Арсений","Единица · Блок Вещего","http://t.me/Personal_Seny"],
+  ["Горбенко Алина","Рассвет · Блок Вещего","http://t.me/CherevatayaAlinkam"],["Арутюнян Самвел","Орион · Блок Вещего","http://t.me/samvelochka"],
+  ["Спирина Анастасия","Север · Блок Вещего","http://t.me/gxxmili"],["Ашин Фёдор","Проект Х · Блок Вещего","http://t.me/mad_afk"]
+ ]},
+ {id:"federalists",name:"Федералисты",desc:"Коалиция Федералистов и Востока. Особо и сказать больше нечего, разве что руководство и большинство кандидатов совсем забыло про выборы и не участвует в них.",people:[
+  ["Латыпов Радмир","Федералисты","https://t.me/Radmir1408"],["Рябченко Василий","Восток","https://t.me/Lightofthemo0n"],
+  ["Аслаханов Александр","Федералисты","https://t.me/AlexandrAsalkhanov"],["Ермаков Влад","Восток","https://t.me/WhatIsLove5273"],
+  ["Халиков Данил","Федералисты","https://t.me/gdfg1221"],["Котлярова Татьяна","Восток","https://t.me/bitterrsaltsugg"],
+  ["Чернышов Артемий","Федералисты","https://t.me/catmenmilota"],["Зимницкая Екатерина","Восток","https://t.me/Inuypi777"],
+  ["Швабский Егор","Федералисты","https://t.me/Awkwardner"],["Зорюков Оскар","Восток","https://t.me/JermainDE"]
+ ]},
+ {id:"youth",name:"Молодежка",desc:"Единственная фракция, которую не взяли в какой либо союз. 3 зарегистрированных кандидата в списке",people:[
+  ["Соловей Яна","Молодежка","https://t.me/ShcoYan"],["Невструев Юрий","Молодежка","https://t.me/Urij_top"],
+  ["Степанова Виктория","Молодежка","https://t.me/vaks_995234"]
+ ]}
+];
+
+// ===== ОПИСАНИЯ КАНДИДАТОВ =====
+// Обычные кандидаты остаются с прежним ключом.
+// Для повторяющихся кандидатов добавлены отдельные ключи list:... и district:...
+const descriptions = {
+  "Николаев Владимир": "Отличный и один из опытнейших кандидатов в Блоке Вещего, однако взять мандат не сможет, так как будет находится в ''Совете Федераций''. Редакция отправляет ему безусловный респект за показательную кампанию от одномандатного кандидата.",
+  "Дзукаева Адриана": "Умная и хорошая девочка, которая имеет портфолио и может в медиа. Для нас один из двух приоритетных кандидатов по округу.",
+  "Чернышов Артемий": "Кандидат по одномандатному округу «Медиа». Фракция «Федералисты».",
+  "Котлярова Татьяна": "Тоже хорошая девочка, в целом не зигует федералистам, да и кампания хорошая у неё. За её вовлечённость мы отдаём ей предпочтение.",
+  "Зиганшин Иван": "Участник фракции ''Проект Х'', создатель проекта ''Новые авторы''. 18 лет, довольно про-активен в кампании, идёт с конструктивом, чем и попал в наше сердечко. Для нас это лучший кандидат по связям!",
+  "Ермаков Влад": "Кандидат по одномандатному округу «Связей». Фракция «Восток», коалиция с «Федералистами».",
+  "Кокорев Андрей": "Кандидат по одномандатному округу «Креативный». Фракция «Рассвет», коалиция «Блок Вещего».",
+  "Милюхина Александра": "Александра совмещает руководство фракцией, кандидатство, должность главы ЦИК и многое иное. Сама по себе хорошая и ответственная девушка, но кампанию не вела, да и мандат не взяла бы из за фракции.",
+  "Швабский Егор": "Идёт от «Федералистов». Для нас говорит о многом, но больше смущает факт потерянной кампании. Идёт и по списку, и по округу. По первому, возможно, мандат и дойдёт, но округ мы отдать не готовы.",
+  "Кадин Давид": "Давид идёт от «Молодежки». В целом показал большую вовлечённость в избирательный процесс и проблему округа. Первый и, возможно, последний ''молодёжкер'', который достоин получить мандат по нашему мнению.",
+  "Морозов Владимир": "на фоне сильного конкурента Арутюняна Самвела выглядит слабо. Он предлагает занять методотдел опросами в личных сообщениях и на мероприятиях — нецелесообразная трата времени. Как и коллеги, он забыл про кампанию: счётчик постов остановился на четырёх..",
+  "Чувилев Матфей": "ВрИО руководителя фракции ''Проект Х'' и помощник Николая ''Вещего''. А ещё он бывший кандидат в председатели московского движения ''Новые'', возможно если бы тогда сделали иной выбор, то всё было бы иначе...",
+  "Дугин Антон": "Здесь можно написать описание кандидата.",
+  "Гайворонский Николай": "Также один из опытных представителей в Блоке Вещего, прошел в движении уже второй созыв, является координатором в рамках проекта ''Муниципалитет 2.0''. Идет на эти выборы с понятной реформой ДВП.",
+  "Головня Александр": "Здесь можно написать описание кандидата.",
+  "Кочкин Илья": "Здесь можно написать описание кандидата.",
+  "Жилин Арсений": "Здесь можно написать описание кандидата.",
+  "Горбенко Алина": "Здесь можно написать описание кандидата.",
+  "Спирина Анастасия": "Предлагает реализовать психологическую помощь в рамках движения «Новые», она не понаслышке знает, что такое перегорание и большой загруз. Сама она является фракционным медийщиком, координатором в рамках проекта ''Муниципалитет 2.0'' и политлидером фракции уже второй созыв.",
+  "Ашин Фёдор": "Опрятный, свежий, чистый, да и просто хороший полит. активист. Небезразличен к судьбе движения.",
+  "Латыпов Радмир": "Руководитель фракции ''Федералисты''. Надежный человек и крепкий хозяйственник, увы мандат забрать не сможет, ибо он руководитель фракции. В списке коалиции решил побыть ''паровозом''.",
+  "Рябченко Василий": "Руководитель ''Востока''. Бывший канидат в председатели Москвы, однако не смог обойти Асалханова и решил возглавить, а не победить. Мандат тоже не заберёт из-за фракции.",
+  "Халиков Данил": "Первый кандидат, который увы перенёс политические разборки в юридическое поле. Заметной кампании от него не было, но поступок откровенно говоря мерзкий, не все хмыри так себя ведут.",
+  "Зимницкая Екатерина": "Екатерина, тоже попала под холеру не ведения кампании. Увы движение и совет судят не только по красивым девочкам в нём, но и по делам, которые они делают.",
+  "Зорюков Оскар": "Курьёз высшего уровня. Ни 1 сообщения в ''Первом избирательном''. В списке потому что он друг Асалханова и Рябченко, который будет нажимать на нужные кнопки.",
+  "Соловей Яна": "Маленькая девочка, но большая скрепа для всей фракции. Видно, что девушка активная, за что её ценят в руководстве и ставят на 1 место.",
+  "Невструев Юрий": "Юрий идёт с программой из 3 шагов: 1. Комитеты должны работать 2. Новичков нельзя оставлять 3. Фракции должны работать вместе. Если кратко, за всё хорошее и против всего плохого.",
+  "Степанова Виктория": "Одна из кандидаток, которую нам постеснялись показать. Мы прошерстили весь свободный интернет и фракционный раздел, но не нашли ничего примечательного. Возможно просто заткнули место, что бы в совете голосовала как в СМС напишут.",
+
+  // Отдельно редактируемые описания повторяющихся кандидатов:
+  "list:federalists:Аслаханов Александр": "Действующий председатель движения, он же человек-слово и человек-народ. Сам по себе хороший, но так и не ввёл устав, имеет довольно умеренную активность для руководителя и ''в сухую'' проиграл дебаты от Вещего.",
+  "district:creative:Асалханов Александр": "Помимо почётного третьего места в списке, которое планируется передать дальше, действующий председатель от «Федералистов» идёт по округу «Креативный». В целом описан в списочном рейтинге, однако страшно представить, что ещё он хочет нам ''накреативить''. Обещаем - не делаем.",
+
+  "list:federalists:Ермаков Влад": "Очередной дублёр от ''коалиции''. Мальчик, 21 год, идёт по списку и по связям. За выборы всего 2 поста, один из которых знакомство. Как одномандатник разочаровывает. Возможно это нехватка времени, но если не хватает времени на выборы, на активную и качественную работу в совете мы и не рассчитываем.",
+  "district:relations:Ермаков Влад": "Очередной дублёр от ''коалиции''. Мальчик, 21 год, идёт по связям. За выборы всего 2 поста, один из которых знакомство. Как одномандатник разочаровывает. Возможно это нехватка времени, но если не хватает времени на выборы, на активную и качественную работу в совете мы и не рассчитываем.",
+
+  "list:federalists:Котлярова Татьяна": "Хорошая девочка, в целом не зигует федералистам. Говорят, что критикует Асалханова с молчаливой подачи руководителя ''Востока'' Василия Рябченко, да и кампания хорошая у неё. За её вовлечённость мы отдаём ей предпочтение.",
+  "district:media:Котлярова Татьяна": "Тоже хорошая девочка, в целом не зигует федералистам. Говорят, что критикует Асалханова с молчаливой подачи руководителя ''Востока'' Василия Рябченко, да и кампания хорошая у неё. За её вовлечённость мы отдаём ей предпочтение.",
+
+  "list:federalists:Чернышов Артемий": "Один из кандидатов-дублёров у федералистов. Находится и в списке, и кандидат по медиа-округу. Перенял у коллег плохую привычку не вести избирательную кампанию: всего 2 поста. Достаточно слабо для одномандатника. По спискам мандат возможно дойдёт.",
+  "district:media:Чернышов Артемий": "Один из кандидатов-дублёров у федералистов. Находится и в списке, и кандидат по медиа-округу. Перенял у коллег плохую привычку не вести избирательную кампанию: всего 2 поста. Достаточно слабо для одномандатника.",
+
+  "list:federalists:Швабский Егор": "Идёт от «Федералистов». Для нас говорит о многом, но ещё больше смущает факт потерянной кампании. Идёт и по списку, и по округу. По первому, возможно, мандат и дойдёт, но округ мы отдать не готовы.",
+  "district:recruiting:Швабский Егор": "Идёт от «Федералистов». Для нас говорит о многом, но ещё больше смущает факт потерянной кампании. Идёт и по списку, и по округу. По первому, возможно, мандат и дойдёт, но округ мы отдать не готовы.",
+
+  "list:project:Арутюнян Самвел": "Здесь можно написать отдельное описание Самвела в списке.",
+  "district:method:Арутюнян Самвел": "Кандидат по одномандатному методическому округу. Фракция «Орион», указана в составе списка «Проект Х».",
+
+  "list:project:Асалханов Александр": "Здесь можно написать отдельное описание Асалханова в списке."
+};
+
+// ===== РЕКОМЕНДАЦИИ ПО ОКРУГАМ =====
+const recommendations = {
+  media: "Дзукаева Адриана и Котлярова Татьяна! Медиа-штаб мы смело отдаём девочкам и очень верим в то, что они поднимут нашу медийку на уровень выше. Искренне желаем им удачи <3",
+  relations: "Иван Зиганшин! Проект ''Новые авторы'' тронул наши сердца, а реформы по округу достойны реализации. Желаем удачи и победы на выборах!",
+  creative: "Здесь будет рекомендация по Креативному округу.",
+  recruiting: "Кадин Давид! Не смотря на то, что округ достаётся почти без боя, с виду это не такой плохой парень. Надеемся на то, что он выдержит сложность специфики округа с которым ему предстоит работать и даст ему вторую жизнь.",
+  method: "Здесь будет рекомендация по Методическому округу."
+};
+
+function renderCards(items,root,type){
+ root.innerHTML=items.map((x,i)=>`<div class="card" onclick="showDetail('${type}','${x.id}')"><div class="num">${String(i+1).padStart(2,'0')}</div><h3>${x.name}</h3><p>${x.desc}</p></div>`).join('');
+}
+function showDetail(type,id){ 
+ const arr=type==="district"?districts:lists, x=arr.find(v=>v.id===id); if(!x)return;
+ document.getElementById("home").classList.add("hidden");document.getElementById("detail").classList.remove("hidden");
+ document.getElementById("detailEyebrow").textContent=type==="district"?"Одномандатный округ":"Партийный список";
+ document.getElementById("detailTitle").textContent=x.name;
+ document.getElementById("detailLead").textContent=x.desc;
+
+ const descriptionKey=(type==="district" ? "district:"+x.id+":" : "list:"+x.id+":");
+
+ document.getElementById("people").innerHTML=(type==="district" ? `<div class="recommend"><div class="rec-label">Редакционное мнение</div><h3>За кого я рекомендую голосовать:</h3><p>${recommendations[x.id] || "Здесь будет размещено редакционное мнение автора сайта по этому округу."}</p></div>` : "") + x.people.map((p,i)=>`<div class="candidate"><div class="candidate-head"><div><div class="candidate-kicker">${type==="district" ? "Кандидат в округе" : "Кандидат в списке"}</div><h3>${p[0]}</h3><div class="coalition">${p[1]}</div></div></div><div class="candidate-body"><p>${descriptions[descriptionKey+p[0]] || descriptions[p[0]] || "Описание кандидата пока не добавлено."}</p><a class="candidate-link" href="${p[2]}" target="_blank" rel="noopener">Telegram ↗</a></div></div>`).join('');
+ window.scrollTo(0,0);
+}
+function goHome(){document.getElementById("detail").classList.add("hidden");document.getElementById("home").classList.remove("hidden");window.scrollTo(0,0)}
+renderCards(districts,document.getElementById("districts"),"district");
+renderCards(lists,document.getElementById("lists"),"list");
+</script>
+</body>
+</html>
